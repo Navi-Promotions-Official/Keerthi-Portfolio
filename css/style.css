@@ -278,12 +278,26 @@ header .logo-scroll {
     display: none;
 }
 
+/* Default logo size */
 header .logo,
 header .logo-2 {
-    font-family: var(--body-font);
-    color: #fff;
-    font-size: 40px;
-    font-weight: 300;
+    max-width: 200px;  /* Set a fixed width */
+    height: auto;       /* Maintain aspect ratio */
+}
+
+/* Adjust logo size for smaller screens */
+@media screen and (max-width: 768px) {
+    header .logo,
+    header .logo-2 {
+        max-width: 165px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .logo,
+    header .logo-2 {
+        max-width: 100px;
+    }
 }
 
 header .logo-2 {
@@ -518,6 +532,8 @@ header .header-col.mid .social-icons {
 .de-navbar-left header nav {
     float: none;
 }
+
+
 
 /* subheader */
 
